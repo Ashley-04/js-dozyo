@@ -1,0 +1,166 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap'); 
+/* アコーディオンのスタイル */
+ .Accordion {
+    background-color: #3078b4;
+    color: ivory;
+    width: 30%;
+    text-align: left;
+    padding: 10px 5px;
+    margin-bottom: 30px;
+    padding: 14px;
+    border-radius: 10px;
+}
+
+.More__text {
+    display: none;
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+.More__content__js {
+    font-size: 14px;
+    padding-bottom: 20px;
+    opacity: 0;
+    transition-duration: .5s;
+}
+
+.Accordion .More__btn,
+.Accordion #More__js {
+    position: relative;
+    text-align: center;
+}
+
+
+/* ーーーーーーーーーーーーーー  ＋、−ボタンの切り替え！ 擬似要素で作るよ！  ーーーーーーーーーーーーーー*/
+/* 最初は＋ボタンの状態 */
+.Accordion .More__btn::before,
+.Accordion #More__js::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: #F5DF4D;
+    transition: .2s;
+    top: 50%;
+    right: 10%;
+    border-radius: 15%;
+}
+
+/* 横 */
+.Accordion .More__btn::after,
+.Accordion #More__js::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: #F5DF4D;
+    transition: .2s;
+    top: 50%;
+    right: 10%;
+    transform: rotate(90deg);
+    border-radius: 15%;
+}
+
+/* 縦 */
+
+/* クリックされたら、.readというクラス名が付与されて−に変化する。 */
+.Accordion .More__btn.read::after , .Accordion #More__js.read::after{
+    transform: rotate(180deg);
+    transition: .3s;
+}
+
+/* js用のcss */
+.open {
+    opacity: 1;
+}
+
+/* modal-end */
+
+
+
+
+
+
+
+/* ポップアップのCSS */
+.Detail_btn,
+        .Detail_btn_js {
+            padding: 10px;
+            background-color: #98b2d1;
+            color: ivory;
+            border-radius: 15px;
+            border: 3px dashed #849bb8;
+            box-shadow: 11px 11px 6px rgb(211, 211, 211);
+            transition: .4s;
+        }
+
+        .Detail_btn:hover,
+        .Detail_btn_js:hover {
+            box-shadow: 0px 0px 0px;
+            transition: .3s;
+        }
+
+        .Detail_wrap {
+            position: relative;
+        }
+
+        .Detail_c {
+            position: absolute;
+            background-color: rgba(000, 000, 000, .4);
+            padding: 30px;
+            border-radius: 10px;
+            z-index: 999;
+            width: 200px;
+            top: 50%;
+            right: 50%;
+            transform: translate(50%, -50%);
+            text-align: center;
+            display: none;
+        }
+
+        .Detail_c_js {
+            position: absolute;
+            background-color: rgba(000, 000, 000, .4);
+            padding: 30px;
+            border-radius: 10px;
+            z-index: -1;
+            width: 200px;
+            top: 50%;
+            right: 50%;
+            transform: translate(50%, -50%);
+            text-align: center;
+            transition: .5s;
+            opacity: 0;
+        }
+
+        .Detail_c_js.open{z-index: 99;opacity: 1;}
+
+        .Detail_c p,
+        .Detail_c_js p {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .close,
+        .close_js {
+            background-color: #fff;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            margin-left: auto;
+            margin-bottom: 20px;
+        }
+
+
+
+
+
+ /* 複数ボタンの紐付け */
+ .btn-wrap,.contents-wrap{display: flex;justify-content: space-around;align-items: center;}
+ .btn-wrap div{font-weight: 600;border:3px dashed #feae51 ;padding: 5px 10px;border-radius: 10px;margin-bottom: 15px;box-shadow: 3px 3px 3px rgba(000,000,000,.09);}
+ .btn-wrap div:hover{cursor: pointer;}
+.tac{text-align: center;border-radius: 10px;padding: 10px;}
+.btn_connect .contents{display: none;}
+/* 複数ボタンの紐付け end */

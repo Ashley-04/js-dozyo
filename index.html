@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>挑め！JS道場〜🎉</title>
+    <link rel="stylesheet" href="style.css">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NW38F8D');</script>
+    <!-- End Google Tag Manager -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-GS2VPBSW4X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GS2VPBSW4X');
+</script> -->
+</head>
+
+<body>
+        <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NW38F8D"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div style="color:#fff;text-align:center;margin-top:50px;">
+        <h1>JavaScript & jQuery道場〜🤪</h1>
+        <p>個人的によく使うな、みたいなものを集めてみました。記述はそこまで難しくないのでぜひ練習してください。<br>ちなみに何気にCSSも重要な役割を果たしてきます。<br>左が<span
+                style="color:#3078b4;font-weight: bold;">jQuery</span>、右が<span style="color: #F5DF4D;font-weight: bold;">JavaScript</span>です。</p>
+    </div>
+    <div class="wrap">
+
+        <section class="Q1">
+            <div class="top">
+                <h2>アコーディオン🪗</h2>
+                <p>クリックすると中身が展開されるアレです。</p>
+            </div>
+
+            <div class="flex">
+                <div class="Accordion">
+                    <div class="More__text">
+                        ここでの注目のスタイルはプラスマイナスを作成している擬似要素です。<br>擬似要素の場所はclass名「.more」にposition:relative;をつけ、擬似要素自体にはposition:absolute;をつけることでいい感じの場所に来させています。
+                        <br>ちなみに擬似要素を使用するときは、「content」「width」、「height」を指定することがマストなので忘れずに！</div>
+                    <div class="More__btn">もっと読む</div>
+                </div>
+                <div class="Accordion">
+                    <div>ちなみにアコーディオンの使用率ってどのくらい。。。？</div>
+                    <div class="More__content__js">けっこう高い気がする。<br>
+                        ちなみにクラス名「.read」が付与された時に変更したいのは縦棒を横にすることだけなので、CSSでは.more.read::afterにtransform:rotate(180deg);を付け足すだけセス！
+                    </div>
+                    <div id="More__js">もっと読む</div>
+                </div>
+            </div>
+
+
+
+        </section>
+        <section class="Q2">
+            <div class="top">
+                <h2>ポップアップ🪟</h2>
+                <p>クリックすると何かが表示されるアレです。</p>
+            </div>
+
+            <div class="flex">
+                <div class="Detail_wrap">
+                    <p class="Detail_btn">詳細をみる</p>
+                    <div class="Detail_c">
+                        <div class="close" id="close">×</div>
+                        <p>中身です</p>
+                    </div>
+                </div>
+                <div class="Detail_wrap">
+                    <p class="Detail_btn_js">詳細をみる</p>
+                    <div class="Detail_c_js">
+                        <div class="close_js" id="close_js">×</div>
+                        <p>中身です</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="q3">
+            <div class="top">
+                <h2>プルダウン🅿️</h2>
+                <p>セレクト要素を使用して絞り込み・コンテンツを変化させるアレです。</p>
+            </div>
+
+            <select id="Select">
+                <option value="fruits">フルーツ</option>
+                <option value="sweets">スイーツ</option>
+                <option value="drink">ドリンク</option>
+            </select>
+
+        <div>
+
+        </div>
+        </section>
+
+
+        <!-- 複数ボタンの紐付け -->
+        <section class="btn_connect">
+            <div class="btn-wrap">
+                <div class="btn" id="a">Aコース</div>
+                <div class="btn" id="b">Bコース</div>
+                <div class="btn" id="c">Cコース</div>
+            </div>
+            
+            <div class="contents-wrap">
+                <div class="t9 tac">
+                    <p>Aコース</p>
+                    <div class="contents contents-a">Aコースの中身です</div>
+                </div>
+            
+                <div class="t6 tac">
+                    <p>Bコース</p>
+                    <div class="contents contents-b">Bコースの中身です</div>
+                </div>
+            
+                <div class="t7 tac">
+                    <p>Cコース</p>
+                    <div class="contents contents-c">Cコースの中身です</div>
+                </div>
+            </div>
+                    </section>
+                    <!-- 複数ボタンの紐付け end -->
+    </div>
+    <style>
+        /* ここのスタイルは変更しない (見栄えのためのスタイル) */
+        /* element-style */
+        body,
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+        }
+
+        /* body{font-family: "筑紫A丸ゴシック",serif;} */
+        /* "A P-OTF A1ゴシック Std R" */
+        body {
+            font-family:'筑紫A丸ゴシック','Kiwi Maru' , sans-serif;
+            background-color: #00a779;
+        }
+
+        section {
+            margin-bottom: 80px;
+            border: 2px solid #00a779;
+            padding: 3%;
+            background-color: #fff;
+            border-radius: 15px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        
+
+        /* color-style */
+        .bl {
+            background-color: #98b2d1;
+        }
+
+        .t1 {
+            background-color: #feae51;
+        }
+
+        .t2 {
+            background-color: #98b2d1;
+        }
+
+        .t3 {
+            background-color: #b35f44;
+        }
+
+        .t4 {
+            background-color: #f3df4d;
+        }
+
+        .t5 {
+            background-color: #3078b4;
+        }
+
+        .t6 {
+            background-color: #9fdbad;
+        }
+
+        .t7 {
+            background-color: #ec8b83;
+        }
+
+        .t8 {
+            background-color: #00a779;
+        }
+
+        .t9 {
+            background-color: #9369a8;
+        }
+
+        .t10 {
+            background-color: #cd4a77;
+        }
+
+        .t11 {
+            background-color: #939597;
+        }
+
+        .t12 {
+            background-color: #F5DF4D;
+        }
+
+        /* class-style */
+        .wrap {
+            width: 80%;
+            margin: 0 auto;
+            padding: 3%;
+            border-radius: 10px;
+            margin-top: 3%;
+        }
+
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .top {
+            margin-bottom: 50px;
+        }
+
+        .Q2 {
+            padding-bottom: 100px;
+        }
+
+        .Q2 .flex {
+            margin-top: 100px;
+        }
+
+        /* 見栄えスタイル終了 */
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script>
+// プルダウン
+ // jQuery
+ // フルーツ、スイーツ、ドリンクのデータを配列で保管。
+//  let fruitsA = ['桃', 'キウイ', 'グレープフルーツ'];
+//         let sweetsA = ['シュークリーム', 'エクレア', 'タルト'];
+//         let drinkA = ['エスプレッソ', 'カフェラテ', 'カフェオレ'];
+//  let select = $('#Select');
+//         select.on('input', function () {
+//             let value = $(this).val();
+//         });
+
+
+
+// 複数ボタンの紐付け
+$('.btn').click(function(){
+   let thisid =  $(this).attr('id');
+   let content_class = 'contents-' + thisid;
+
+   $('.contents').not('.'+ content_class).css('display','none');
+    // 上記の一文をコメントアウトすると、クリックしたものは全て展開される。
+    
+ $('.'+ content_class).slideToggle();
+});
+// 複数ボタンの紐付け-end
+
+        
+    </script>
+</body>
+
+</html>
